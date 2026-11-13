@@ -1,0 +1,7 @@
+discord.py
+rank-bm25
+sentence-transformers
+numpy
+pytest
+python-dotenv
+pytesseract
