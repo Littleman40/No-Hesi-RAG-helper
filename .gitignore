@@ -1,3 +1,7 @@
 data/raw/*
 .env
-tests/*
+data/index/
+logs/
+eval/raw_questions.txt
+.pytest_cache/*
+__pycache__/

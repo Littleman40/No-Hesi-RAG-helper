@@ -1,0 +1,53 @@
+{"id": "q001", "question": "whats this checksum failed thing mean?", "gold_chunks": ["error-messages--checksum-failed-1"], "type": "in_scope", "split": "dev"}
+{"id": "q002", "question": "how do I refund my purchase, because I got charged illegally?", "gold_chunks": [], "type": "escalate", "split": "dev"}
+{"id": "q003", "question": "how do I join servers?", "gold_chunks": ["recent-updates-3"], "type": "in_scope", "split": "test"}
+{"id": "q004", "question": "where can I filter by specic servers?", "gold_chunks": [], "type": "out_of_scope", "split": "dev"}
+{"id": "q005", "question": "what series is it currently, and whats the meta?", "gold_chunks": ["point-system-related--series-6.7-points-ranks-explained-1"], "type": "in_scope", "split": "dev"}
+{"id": "q006", "question": "how am I meant to download the srp track?", "gold_chunks": ["install-guides--how-to-install-delete-tracks-manually-2"], "type": "in_scope", "split": "test"}
+{"id": "q007", "question": "how am I meant to download the cars?", "gold_chunks": ["install-guides--how-to-install-delete-cars-manually-3"], "type": "in_scope", "split": "dev"}
+{"id": "q008", "question": "are there any new cars?", "gold_chunks": [], "type": "out_of_scope", "split": "test"}
+{"id": "q009", "question": "what do I need to download to play?", "gold_chunks": ["install-guides-1"], "type": "in_scope", "split": "test"}
+{"id": "q010", "question": "what is no hesi even about?", "gold_chunks": ["index-1"], "type": "in_scope", "split": "dev"}
+{"id": "q011", "question": "how do i link my steam account to my no hesi profile", "gold_chunks": ["discord-steam-related--link-steam-to-no-hesi-content-manager-discord-1"], "type": "in_scope", "split": "test"}
+{"id": "q012", "question": "what csp version should I be running", "gold_chunks": ["graphics-related--custom-shaders-patch-2"], "type": "in_scope", "split": "dev"}
+{"id": "q013", "question": "so how do i rank up mine is grey", "gold_chunks": ["point-system-related--series-6.7-points-ranks-explained-2"], "type": "in_scope", "split": "test"}
+{"id": "q014", "question": "where do i even find srp to download it", "gold_chunks": ["install-guides--how-to-install-delete-tracks-manually-4"], "type": "in_scope", "split": "dev"}
+{"id": "q015", "question": "FAILED TO CONNECT HANDHAKE FAILED", "gold_chunks": ["error-messages--handshake-failed-1"], "type": "in_scope", "split": "test"}
+{"id": "q016", "question": "i cant load into a srp map", "gold_chunks": ["install-guides--how-to-install-delete-tracks-manually-4"], "type": "in_scope", "split": "dev"}
+{"id": "q017", "question": "where do i download these tracks", "gold_chunks": ["install-guides--how-to-install-delete-tracks-manually-2"], "type": "in_scope", "split": "test"}
+{"id": "q018", "question": "Why im offline please ?", "gold_chunks": ["discord-steam-related--how-to-fix-you-are-playing-offline-1"], "type": "in_scope", "split": "dev"}
+{"id": "q019", "question": "why is my rpm maxed without my foot on the pedal", "gold_chunks": ["error-messages--csp-speedbug-fix-2"], "type": "in_scope", "split": "test"}
+{"id": "q020", "question": "viechle doesnt match the server something data", "gold_chunks": ["error-messages--mismatch-collider-data-1"], "type": "in_scope", "split": "dev"}
+{"id": "q021", "question": "i keep getting Vehicle 'nohesi_x3m_f97_adro' doesn'st match th server. Please uptade your car", "gold_chunks": ["error-messages--mismatch-collider-data-1"], "type": "in_scope", "split": "test"}
+{"id": "q022", "question": "why is my custom shaders patch not installing", "gold_chunks": ["graphics-related--custom-shaders-patch-2"], "type": "in_scope", "split": "dev"}
+{"id": "q023", "question": "how do i fix the data for specific cars?", "gold_chunks": ["error-messages--mismatch-collider-data-1"], "type": "in_scope", "split": "test"}
+{"id": "q024", "question": "How to install / delete tracks manually", "gold_chunks": ["install-guides--how-to-install-delete-tracks-manually-2"], "type": "in_scope", "split": "dev"}
+{"id": "q025", "question": "I'm getting a \"Install Missing Content\" prompt on 110 on a custom server. I've installed the content and restarted but it still remains.", "gold_chunks": ["install-guides--how-to-install-delete-tracks-manually-4"], "type": "in_scope", "split": "test"}
+{"id": "q026", "question": "everytime i load my game it says Failed handshake than crashs", "gold_chunks": ["error-messages--handshake-failed-1"], "type": "in_scope", "split": "dev"}
+{"id": "q027", "question": "game says car doesnt match", "gold_chunks": ["error-messages--mismatch-collider-data-1"], "type": "in_scope", "split": "test"}
+{"id": "q028", "question": "Start playing button is gray", "gold_chunks": ["no-hesi-launcher--start-button-greyed-out-on-launcher-2"], "type": "in_scope", "split": "dev"}
+{"id": "q029", "question": "where can i find my admin password for my server?", "gold_chunks": [], "type": "out_of_scope", "split": "dev"}
+{"id": "q030", "question": "how do i open up a ticket", "gold_chunks": ["vip-issues--how-to-reach-out-to-staff-open-a-support-ticket-1"], "type": "in_scope", "split": "test"}
+{"id": "q031", "question": "how do i play no hesi on vr", "gold_chunks": ["assetto-corsa-related--we-dont-offer-support-for-1"], "type": "in_scope", "split": "dev"}
+{"id": "q032", "question": "track \"nohesi_415\" is damaged", "gold_chunks": ["install-guides--how-to-install-delete-tracks-manually-3"], "type": "in_scope", "split": "test"}
+{"id": "q033", "question": "can i download all the cars at once for the nohesi heavy public traffic", "gold_chunks": ["install-guides--how-to-use-install-missing-content-to-download-cars-1"], "type": "in_scope", "split": "dev"}
+{"id": "q034", "question": "nordschliefe keeps telling me to install g82_adro each time but wont install when i hit download missing content", "gold_chunks": ["install-guides--where-is-nordschleife-tourist-1"], "type": "in_scope", "split": "test"}
+{"id": "q035", "question": "How do i reinstall all the cars?", "gold_chunks": ["install-guides--how-to-install-delete-cars-manually-2"], "type": "in_scope", "split": "dev"}
+{"id": "q036", "question": "my shit says driver model is probably missing", "gold_chunks": ["error-messages--driver-model-is-probably-missing-1"], "type": "in_scope", "split": "test"}
+{"id": "q037", "question": "how do i fix track not found", "gold_chunks": ["error-messages--error-track-not-found-1"], "type": "in_scope", "split": "dev"}
+{"id": "q038", "question": "i\u2019m getting a mismatch data how do i fix this in simple terms", "gold_chunks": ["error-messages--mismatch-collider-data-1"], "type": "in_scope", "split": "test"}
+{"id": "q039", "question": "it says handshake couldnt be compleated", "gold_chunks": ["error-messages--handshake-failed-3"], "type": "in_scope", "split": "dev"}
+{"id": "q040", "question": "Anyone else get the error \"Lamborghini_Huracan_stj does'nt match the server\" ?", "gold_chunks": ["error-messages--mismatch-collider-data-1"], "type": "in_scope", "split": "test"}
+{"id": "q041", "question": "my gas pedal is on full throttle", "gold_chunks": ["error-messages--csp-speedbug-fix-2"], "type": "in_scope", "split": "dev"}
+{"id": "q042", "question": "My steering wheel not working when in no hesi", "gold_chunks": ["keybinds-gameplay--how-to-setup-your-steering-wheel-3"], "type": "in_scope", "split": "test"}
+{"id": "q043", "question": "my leaderboard is offline", "gold_chunks": ["discord-steam-related--how-to-fix-you-are-playing-offline-4"], "type": "in_scope", "split": "dev"}
+{"id": "q044", "question": "how can i unlink a steam account", "gold_chunks": [], "type": "escalate", "split": "test"}
+{"id": "q045", "question": "missing csp features, please update csp and/or content manager. error", "gold_chunks": ["error-messages--missing-csp-features-1"], "type": "in_scope", "split": "test"}
+{"id": "q046", "question": "yoo can someone help me setup pure all the menus are invisible", "gold_chunks": ["install-guides--how-to-get-pure-paid-mod-3"], "type": "in_scope", "split": "dev"}
+{"id": "q047", "question": "Why do i have car locked this car only drives on no hesi servers ?", "gold_chunks": ["error-messages--car-locked-this-car-only-runs-on-no-hesi-1"], "type": "in_scope", "split": "test"}
+{"id": "q048", "question": "Why can\u2019t I join any servers it\u2019s saying race canceled", "gold_chunks": ["error-messages--race-cancelled-3"], "type": "in_scope", "split": "dev"}
+{"id": "q049", "question": "why doesn't my no hesi score pop up, it always says connection error", "gold_chunks": ["discord-steam-related--how-to-fix-you-are-playing-offline-4"], "type": "in_scope", "split": "test"}
+{"id": "q050", "question": "how to turn off traction control", "gold_chunks": ["keybinds-gameplay--in-game-default-shortcuts-1"], "type": "in_scope", "split": "dev"}
+{"id": "q051", "question": "what do i do if my steam is already hooked upto another account", "gold_chunks": [], "type": "escalate", "split": "dev"}
+{"id": "q052", "question": "how do i link my steam account on the launcher", "gold_chunks": ["discord-steam-related--link-steam-to-no-hesi-content-manager-discord-2"], "type": "in_scope", "split": "test"}
+{"id": "q053", "question": "Does anyone have any cheap graphics packs? Im running a 3060 ti, 16gb ram and an r5 5600.", "gold_chunks": ["graphics-related-1"], "type": "in_scope", "split": "dev"}
