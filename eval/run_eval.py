@@ -178,7 +178,7 @@ def main():
     lines = [f"# Eval report: {args.split} split, {len(questions)} questions", "", f"Run {time.strftime('%Y-%m-%d %H:%M')}", ""]
     lines += retrieval_report(questions) + [""] + escalation_report(questions)
     if args.generate:
-        answers_file = RESULTS_DIR / f"{args.save or 'latest'}-answers.jsonl"
+        answers_file = RESULTS_DIR / "answers" / f"{args.save or 'latest'}.jsonl"
         lines += [""] + generation_report(questions, answers_file)
 
     report = "\n".join(lines)

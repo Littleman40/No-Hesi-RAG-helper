@@ -78,3 +78,10 @@ def test_generate_calls_ollama(monkeypatch):
     assert sent["url"].endswith("/api/chat")
     assert sent["body"]["options"]["temperature"] <= 0.2
     assert sent["body"]["messages"][0]["content"] == answer.SYSTEM_PROMPT
+
+
+def test_escalate_topic_matches_words_in_any_order():
+    assert answer.escalate_topic("how can i unlink a steam account") == "steam_delink"
+    assert answer.escalate_topic("my steam is already hooked upto another account") == "steam_delink"
+    assert answer.escalate_topic("i want my money back") == "refund"
+    assert answer.escalate_topic("how do i link my steam account") is None

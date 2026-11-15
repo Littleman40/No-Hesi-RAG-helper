@@ -8,6 +8,8 @@ import numpy as np
 from rank_bm25 import BM25Okapi
 from sentence_transformers import SentenceTransformer
 
+from search_aliases import SEARCH_ALIASES
+
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CHUNKS_FILE = PROJECT_ROOT / "data" / "chunks.jsonl"
 INDEX_DIR = PROJECT_ROOT / "data" / "index"
@@ -25,7 +27,7 @@ def load_chunks():
     return chunks
 
 def tokenize(text):
-    text = text.replace("\\", "")
+    text = text.replace("\\", "").replace("'", "").replace("’", "")
 
     words = []
     current = ""
@@ -47,10 +49,15 @@ def tokenize(text):
     return cleaned
 
 
+def search_text(chunk):
+    alias = SEARCH_ALIASES.get(chunk["id"].rsplit("-", 1)[0])
+    return chunk["text"] + "\n\n" + alias if alias else chunk["text"]
+
+
 def build_bm25(chunks):
     tokenized_chunks = []
     for chunk in chunks:
-        tokenized_chunks.append(tokenize(chunk["text"]))
+        tokenized_chunks.append(tokenize(search_text(chunk)))
     return BM25Okapi(tokenized_chunks)
 
 
@@ -62,7 +69,7 @@ def normalize(vectors):
     return vectors / lengths
 
 def fingerprint():
-    data = CHUNKS_FILE.read_bytes() + MODEL_NAME.encode("utf-8")
+    data = CHUNKS_FILE.read_bytes() + MODEL_NAME.encode("utf-8") + json.dumps(SEARCH_ALIASES).encode("utf-8")
     return hashlib.sha256(data).hexdigest()
 
 def load_or_build_embeddings(chunks, model):
@@ -76,7 +83,7 @@ def load_or_build_embeddings(chunks, model):
     print("Building embeddings for", len(chunks), "chunks with", MODEL_NAME, "...")
     texts = []
     for chunk in chunks:
-        texts.append(chunk["text"])
+        texts.append(search_text(chunk))
     vectors = normalize(model.encode(texts, show_progress_bar=True))
 
     INDEX_DIR.mkdir(parents=True, exist_ok=True)

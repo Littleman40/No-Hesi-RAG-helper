@@ -44,7 +44,7 @@ def rrf(rankings, k=60):
     return sorted(scores.items(), key=lambda pair: pair[1], reverse=True)
 
 BM25_FLOOR = 8.0
-VECTOR_FLOOR = 0.35
+VECTOR_FLOOR = 0.30
 
 def hybrid_search(query, k=5, pool=20):
     bm25_results = bm25_search(query, pool)

@@ -9,6 +9,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+import index
 import retrieve
 from escalate_topics import ESCALATE_TOPICS
 
@@ -33,10 +34,10 @@ Rules:
 URL_PATTERN = re.compile(r"https?://[^\s<>()\"']+")
 
 def escalate_topic(question):
-    question = question.lower()
+    words = index.tokenize(question)
     for topic, phrases in ESCALATE_TOPICS.items():
         for phrase in phrases:
-            if phrase in question:
+            if all(any(part in word for word in words) for part in phrase.split()):
                 return topic
     return None
 
@@ -57,23 +58,27 @@ def check_citations(text, allowed_urls):
     return re.sub(r"(?m)^Source:\s*$\n?", "", text).strip()
 
 
-def generate(question, chunks):
+def ollama_chat(system, user, think=None):
+    body = {
+        "model": MODEL,
+        "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
+        "stream": False,
+        "options": {"temperature": 0.1},
+    }
+    if think is not None:
+        body["think"] = think
     request = urllib.request.Request(
         OLLAMA_URL.rstrip("/") + "/api/chat",
-        data=json.dumps({
-            "model": MODEL,
-            "messages": [
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": build_prompt(question, chunks)},
-            ],
-            "stream": False,
-            "options": {"temperature": 0.1},
-        }).encode("utf-8"),
+        data=json.dumps(body).encode("utf-8"),
         headers={"Content-Type": "application/json"},
     )
     with urllib.request.urlopen(request, timeout=300) as response:
         text = json.loads(response.read())["message"]["content"]
     return re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
+
+
+def generate(question, chunks):
+    return ollama_chat(SYSTEM_PROMPT, build_prompt(question, chunks))
 
 
 def log(result):

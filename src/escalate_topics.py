@@ -2,6 +2,6 @@
 
 ESCALATE_TOPICS = {
     "refund": ["refund", "chargeback", "money back"],
-    "steam_delink": ["delink", "unlink steam", "remove steam account", "change steam account"],
+    "steam_delink": ["delink", "unlink steam", "remove steam account", "change steam account", "steam another account", "steam different account"],
     "email_change": ["change email", "change my email", "update email", "new email"],
 }
